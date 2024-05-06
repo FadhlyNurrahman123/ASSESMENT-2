@@ -25,8 +25,9 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Nama</th>
-            <th>Komentar</th>
+            <th>Nama Pemesan</th>
+            <th>Nama Lapangan</th>
+            <th>Total Bayar</th>
             <th>Aksi</th>
         </tr>
     </thead>
@@ -49,8 +50,9 @@
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             echo "<td>" . $row['id'] . "</td>";
-            echo "<td>" . $row['nama'] . "</td>";
-            echo "<td>" . $row['komentar'] . "</td>";
+            echo "<td>" . $row['nama_pemesan'] . "</td>";
+            echo "<td>" . $row['nama_lapangan'] . "</td>";
+            echo "<td>" . $row['total_bayar'] . "</td>";
             echo "<td><button onclick=\"hapusData(" . $row['id'] . ")\">Hapus</button></td>";
             echo "</tr>";
         }
